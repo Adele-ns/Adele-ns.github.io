@@ -1,0 +1,36 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='scrolling-text.css') }}">
+    <title>Langages</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Langages</h1>
+    </header>
+    <main>
+        <section id="game-section">
+            <div id="map-container"></div>
+            <div id="buttons-container">
+                <button id="play-button">Jouer</button>
+                <button id="training-button">Entrainement</button>
+            </div>
+        </section>
+        <section id="scrolling-text-section">
+            <h2 id="scrolling-text">Texte qui défile !</h2>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
