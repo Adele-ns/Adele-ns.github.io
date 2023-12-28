@@ -1,16 +1,17 @@
 // static/script.js
 $(document).ready(function () {
-    // Initialiser la carte Leaflet
+    // Coordonnées géographiques de Paris
+    var parisCoordinates = [48.8566, 2.3522];
+
+    // Initialiser la carte Leaflet centrée sur [0, 0] (au centre du monde)
     var map = L.map('map-container').setView([0, 0], 2);
 
     // Ajouter une couche de tuiles (OpenStreetMap)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/s{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Exemple : Ajouter un marqueur au centre de la carte
-    L.marker([0, 0]).addTo(map).bindPopup('Centre de la carte');
-
-    // Ajoutez votre propre logique pour la carte ici
+    // Ajouter un marqueur à Paris
+    L.marker(parisCoordinates).addTo(map).bindPopup('Made in France');
 });
 
