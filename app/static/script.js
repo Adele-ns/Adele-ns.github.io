@@ -11,4 +11,8 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-    // Ajout
+    // Ajouter un marqueur à Paris
+    L.marker(parisCoordinates).addTo(map)
+        .bindPopup('Made in France');
+});
+
